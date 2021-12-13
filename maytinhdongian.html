@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+    <style>
+        .boxcenter{
+            width:300px;
+            margin: 0 auto;
+        }
+        input[type="button"] {
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            margin: 3px;
+        }
+        input[type="text"]{
+            width: 87%;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+<div class="boxcenter" >
+    <input type="text" onclick="" id="console">
+    <input onclick="anso('1')" value="1" type="button">
+    <input onclick="anso('2')" value="2" type="button">
+    <input onclick="anso('3')" value="3" type="button">
+    <input onclick="anso('+')" value="+" type="button">
+
+    <input onclick="anso('4')" value="4" type="button">
+    <input onclick="anso('5')" value="5" type="button">
+    <input onclick="anso('6')" value="6" type="button">
+    <input onclick="anso('-')" value="-" type="button">
+
+    <input onclick="anso('7')" value="7" type="button">
+    <input onclick="anso('8')" value="8" type="button">
+    <input onclick="anso('9')" value="9" type="button">
+    <input onclick="anso('*')" value="x" type="button">
+
+    <input onclick="reset()" value="C" type="button">
+    <input onclick="anso('0')" value="0" type="button">
+    <input onclick="tinhtoan()" value="=" type="button">
+    <input onclick="anso('/')" value="/" type="button">
+</div>
+<script>
+    function anso(so)
+    {
+        document.getElementById('console').value += so
+    }
+    function tinhtoan()
+    {
+        document.getElementById('console').value= eval(document.getElementById('console').value)
+    }
+    function reset()
+    {
+       document.getElementById('console').value=""
+    }
+</script>
+</body>
+</html>
